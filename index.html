@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hollis Cuffie | Senior Data Scientist</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .hero-bg { background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%); }
+  </style>
+</head>
+<body class="bg-zinc-950 text-zinc-200">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 w-full bg-zinc-900/80 backdrop-blur-md z-50 border-b border-zinc-800">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-white">Hollis Cuffie</h1>
+      <div class="flex gap-8 text-sm">
+        <a href="#about" class="hover:text-blue-400 transition">About</a>
+        <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
+        <a href="#experience" class="hover:text-blue-400 transition">Experience</a>
+        <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
+        <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-bg min-h-screen flex items-center pt-20">
+    <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-5xl md:text-6xl font-bold leading-tight">Senior Data Scientist</h2>
+        <p class="mt-4 text-xl text-zinc-400">5+ years building production ML systems that drive tens of millions in impact</p>
+        <div class="mt-8 flex gap-4">
+          <a href="https://linkedin.com/in/hcuffie" target="_blank" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-full font-medium flex items-center gap-2">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://github.com/hcuffie1" target="_blank" class="px-6 py-3 border border-zinc-700 hover:border-white rounded-full font-medium flex items-center gap-2">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+      <div class="flex justify-center">
+        <!-- Replace this URL with your own photo after uploading it to the repo as "profile.jpg" -->
+        <img src="https://via.placeholder.com/400x400/1e2937/64748b?text=HC" 
+             alt="Hollis Cuffie" 
+             class="w-80 h-80 rounded-2xl object-cover border-4 border-blue-500 shadow-2xl">
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-24 bg-zinc-900">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-8 text-center">About Me</h2>
+      <div class="prose prose-invert max-w-none text-lg leading-relaxed">
+        <p>Senior Data Scientist with 5+ years driving high-impact analytics and experimentation in retail and consumer marketplaces. Expert in causal inference, incrementality measurement, large-scale A/B testing, uplift modeling, and simulation to quantify trade-offs and optimize growth.</p>
+        <p>I own end-to-end analytical frameworks that shape product roadmaps, prioritize investments, and deliver tens of millions in incremental lift/revenue. Skilled at translating complex behavioral and marketplace data into actionable leadership insights while partnering cross-functionally with Product and Engineering to scale experimentation and data-driven decisions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="py-24 bg-zinc-950">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-12 text-center">Skills & Tools</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="bg-zinc-900 p-6 rounded-2xl text-center">Python • PySpark • SQL</div>
+        <div class="bg-zinc-900 p-6 rounded-2xl text-center">Causal Inference • A/B Testing • CUPED</div>
+        <div class="bg-zinc-900 p-6 rounded-2xl text-center">XGBoost • SHAP • Time-Series Forecasting</div>
+        <div class="bg-zinc-900 p-6 rounded-2xl text-center">RAG • LLM • LangChain</div>
+        <div class="bg-zinc-900 p-6 rounded-2xl text-center">Databricks • Azure • GCP • BigQuery</div>
+        <div class="bg-zinc-900 p-6 rounded-2xl text-center">Product Analytics • KPI Design • Experimentation</div>
+        <div class="bg-zinc-900 p-6 rounded-2xl text-center">Behavioral Modeling • Uplift • Simulation</div>
+        <div class="bg-zinc-900 p-6 rounded-2xl text-center">Cross-Functional Leadership</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="py-24 bg-zinc-900">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-12 text-center">Experience</h2>
+      
+      <div class="space-y-16">
+        <!-- P&G Senior -->
+        <div class="grid md:grid-cols-12 gap-8">
+          <div class="md:col-span-3 text-zinc-400">Jul 2024 – Present</div>
+          <div class="md:col-span-9">
+            <h3 class="text-2xl font-semibold">Senior Data Scientist — Procter & Gamble</h3>
+            <ul class="mt-4 space-y-3 text-zinc-300 list-disc pl-5">
+              <li>Owned and evolved enterprise ML decision platform integrating geospatial, demographic, behavioral, and syndicated sales data; influences $300M+ in annual revenue decisions</li>
+              <li>Re-architected core models with XGBoost + SHAP interpretability; lifted AUC 0.84 → 0.89 and unlocked $50M incremental impact</li>
+              <li>Designed scalable time-series forecasting and causal inference frameworks; captured $20M in whitespace opportunities</li>
+              <li>Built and deployed production RAG knowledge assistant; reduced exploration time 50–60%</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Embedded Lead & Manager roles abbreviated similarly — I can expand if you want full bullets -->
+
+        <!-- One Kings Lane abbreviated -->
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS (add your repos here) -->
+  <section id="projects" class="py-24 bg-zinc-950">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-12 text-center">Featured Projects</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Add cards here with your actual GitHub repo links and descriptions -->
+        <div class="bg-zinc-900 rounded-3xl p-8 hover:scale-105 transition">
+          <p class="text-blue-400 font-medium">Enterprise ML Decision Platform</p>
+          <p class="mt-3 text-sm text-zinc-400">Production forecasting & causal system influencing $300M+ revenue</p>
+          <a href="https://github.com/hcuffie1" class="mt-6 inline-block text-blue-400 hover:underline">View on GitHub →</a>
+        </div>
+        <!-- Add 2–3 more cards as you publish repos -->
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION & CONTACT -->
+  <section id="contact" class="py-24 bg-zinc-900">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-8">Education</h2>
+      <p class="text-xl">M.S. Systems Science – Binghamton University (GPA 4.0)</p>
+      <p class="text-xl">B.S. Human & Organizational Development – Vanderbilt University</p>
+
+      <div class="mt-16">
+        <a href="mailto:hollis.cuffie@gmail.com" class="text-3xl font-medium hover:text-blue-400">hollis.cuffie@gmail.com</a>
+        <div class="mt-8 flex justify-center gap-8 text-3xl">
+          <a href="https://linkedin.com/in/hcuffie" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/hcuffie1" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-8 text-center text-zinc-500 text-sm">
+    © 2026 Hollis Cuffie • Built with ❤️ on GitHub Pages
+  </footer>
+
+</body>
+</html>
