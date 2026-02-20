@@ -11,7 +11,8 @@
   <style>
     #particles-js { position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: -1; }
     .hero-photo { transition: all 0.4s ease; }
-    .hero-photo:hover { transform: scale(1.05); box-shadow: 0 0 40px rgba(59, 130, 246, 0.6); }
+    .hero-photo:hover { transform: scale(1.05); box-shadow: 0 0 50px rgba(59, 130, 246, 0.7); }
+    .typed-cursor { font-size: 1.2em; }
   </style>
 </head>
 <body class="bg-zinc-950 text-zinc-200 overflow-x-hidden">
@@ -25,9 +26,10 @@
       <h1 class="text-2xl font-bold">Hollis Cuffie</h1>
       <div class="flex gap-8 text-sm font-medium">
         <a href="#about" class="hover:text-blue-400 transition">About</a>
-        <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
         <a href="#experience" class="hover:text-blue-400 transition">Experience</a>
+        <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
         <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
+        <a href="#beyond" class="hover:text-blue-400 transition">Beyond Work</a>
         <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
       </div>
     </div>
@@ -37,79 +39,182 @@
   <section class="min-h-screen flex items-center pt-20">
     <div class="max-w-5xl mx-auto px-6 text-center">
       <img src="profile.jpg" alt="Hollis Cuffie" class="hero-photo mx-auto w-64 h-64 rounded-full border-4 border-blue-500 object-cover shadow-2xl mb-8">
-      
+
       <h1 class="text-6xl md:text-7xl font-bold tracking-tight">Hollis Cuffie</h1>
       
-      <!-- Typing Animation -->
+      <!-- Faster + Smaller Typing Animation -->
       <div class="mt-4 text-3xl md:text-4xl font-medium text-blue-400 h-12">
         <span id="typed"></span>
       </div>
 
       <p class="mt-8 max-w-2xl mx-auto text-lg text-zinc-400">
-        Senior Data Scientist building production ML systems and causal frameworks that deliver measurable impact at scale.
+        Senior Data Scientist building production ML systems and causal frameworks that drive tens of millions in impact.
       </p>
 
-      <div class="mt-10 flex gap-4 justify-center">
-        <a href="https://linkedin.com/in/hcuffie" target="_blank" class="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-full font-medium flex items-center gap-2 transition">
+      <div class="mt-10 flex gap-4 justify-center flex-wrap">
+        <a href="https://linkedin.com/in/hcuffie" target="_blank" 
+           class="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-full font-medium flex items-center gap-2 transition">
           <i class="fab fa-linkedin"></i> LinkedIn
         </a>
-        <a href="https://github.com/hcuffie1" target="_blank" class="px-8 py-4 border border-zinc-700 hover:border-white rounded-full font-medium flex items-center gap-2 transition">
+        <a href="https://github.com/hcuffie1" target="_blank" 
+           class="px-8 py-4 border border-zinc-700 hover:border-white rounded-full font-medium flex items-center gap-2 transition">
           <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="Hollis_Cuffie_Resume.pdf" download 
+           class="px-8 py-4 bg-emerald-600 hover:bg-emerald-700 rounded-full font-medium flex items-center gap-2 transition">
+          <i class="fas fa-download"></i> Download CV
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Rest of your sections (About, Skills, Experience, Projects, Contact) can be added below using the same Tailwind style as my previous version. Let me know if you want me to add the full expanded version with your resume bullets. -->
+  <!-- ABOUT -->
+  <section id="about" class="py-24 bg-zinc-900">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-8 text-center">About Me</h2>
+      <div class="prose prose-invert max-w-none text-lg leading-relaxed">
+        <p>Senior Data Scientist with 5+ years driving high-impact analytics and experimentation in retail and consumer marketplaces. Expert in causal inference, incrementality measurement, large-scale A/B testing, uplift modeling, and simulation to quantify trade-offs and optimize growth.</p>
+        <p>I own end-to-end analytical frameworks that shape product roadmaps, prioritize investments, and deliver tens of millions in incremental lift/revenue. Skilled at translating behavioral and marketplace data into actionable leadership insights while partnering cross-functionally with Product and Engineering to scale experimentation and data-driven decisions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="py-24 bg-zinc-950">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-12 text-center">Experience</h2>
+      <div class="space-y-16">
+
+        <!-- P&G Senior -->
+        <div>
+          <h3 class="text-2xl font-semibold">Senior Data Scientist — Procter & Gamble</h3>
+          <p class="text-zinc-400">Cincinnati, OH | Jul 2024 – Present</p>
+          <ul class="mt-4 space-y-3 text-zinc-300 list-disc pl-5 text-[15px]">
+            <li>Owned and evolved enterprise ML decision platform integrating geospatial, demographic, behavioral, and syndicated sales data to prioritize retail investment and optimize national account growth; platform influences $300M+ in annual revenue decisions.</li>
+            <li>Re-architected core production models with XGBoost + full SHAP interpretability; lifted AUC 0.84 → 0.89 (+5 pts), unlocking $50M in incremental impact.</li>
+            <li>Designed scalable causal inference and forecasting frameworks to estimate incremental lift in sparse data; captured $20M in whitespace opportunities.</li>
+            <li>Built and deployed production RAG knowledge assistant; reduced internal exploration time 50–60% and boosted adoption.</li>
+            <li>Built simulation and experimentation systems evaluating trade-offs across assortment, conversion, and distribution; cut time-to-insight by 40%.</li>
+            <li>Mentored analysts and led training for cross-functional teams on experimentation, ML interpretability, and production validation.</li>
+          </ul>
+        </div>
+
+        <!-- Embedded Lead -->
+        <div>
+          <h3 class="text-2xl font-semibold">Embedded Lead Data Scientist — Procter & Gamble</h3>
+          <p class="text-zinc-400">Cincinnati, OH | Aug 2022 – Jul 2024</p>
+          <ul class="mt-4 space-y-3 text-zinc-300 list-disc pl-5 text-[15px]">
+            <li>Led market-scale causal experimentation across 20+ algorithmic pacing and allocation deployments, synthesizing behavioral insights to guide durable investment strategy and generating $4.7M in efficiency gains.</li>
+            <li>Developed and deployed P&G’s inaugural Multicultural GenAI LLM application, improving response accuracy from 64% → 84%.</li>
+            <li>Built scalable LLM observability and evaluation tooling with structured evaluation pipelines.</li>
+            <li>Optimized cross-media reach measurement and linear TV forecasting, contributing to 5-7% global media efficiencies.</li>
+          </ul>
+        </div>
+
+        <!-- Analytics Manager -->
+        <div>
+          <h3 class="text-2xl font-semibold">Analytics & Insights Manager — Procter & Gamble</h3>
+          <p class="text-zinc-400">Cincinnati, OH | Aug 2020 – Aug 2022</p>
+          <ul class="mt-4 space-y-3 text-zinc-300 list-disc pl-5 text-[15px]">
+            <li>Owned end-to-end product analytics for P&G Beauty’s iOS app, defining KPIs across acquisition, activation, engagement, retention, and conversion.</li>
+            <li>Designed and analyzed A/B tests accounting for delayed effects; drove +80% profile completion and 2× multi-product engagement.</li>
+            <li>Built behavioral cohorts and lifecycle personas from large-scale clickstream data to inform personalization and roadmap decisions.</li>
+            <li>Led executive KPI reporting and translated complex analyses into actionable narratives for senior leadership.</li>
+          </ul>
+        </div>
+
+        <!-- One Kings Lane -->
+        <div>
+          <h3 class="text-2xl font-semibold">Business & Operations Analyst, Product Team — One Kings Lane</h3>
+          <p class="text-zinc-400">New York, NY | May 2019 – Apr 2020</p>
+          <ul class="mt-4 space-y-3 text-zinc-300 list-disc pl-5 text-[15px]">
+            <li>Led search and discovery analytics, supporting migration to ML-powered relevance engine and improving conversion rate ~3%.</li>
+            <li>Applied topic modeling (LDA) to customer return comments; findings informed product and vendor policy changes.</li>
+            <li>Built SQL-based vendor scorecards identifying $250K in preventable losses and automated returns tracking workflow.</li>
+          </ul>
+        </div>
+
+        <!-- Mount Sinai + Internships (shortened) -->
+        <div class="grid md:grid-cols-2 gap-12">
+          <div>
+            <h3 class="text-xl font-semibold">Process Improvement Analyst — Mount Sinai Health System</h3>
+            <p class="text-zinc-400 text-sm">Sep 2018 – May 2019</p>
+            <p class="text-zinc-400 text-sm mt-1">Applied statistical modeling to redesign Emergency Department workflows and improve patient throughput.</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold">Hospital Administration Intern — Northside Hospital / Cleveland Clinic</h3>
+            <p class="text-zinc-400 text-sm">2016 – 2018</p>
+            <p class="text-zinc-400 text-sm mt-1">Supported healthcare operations and process improvement initiatives across multiple hospital systems.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="py-24 bg-zinc-900">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-12 text-center">Skills & Tools</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div class="bg-zinc-800 p-6 rounded-2xl">Python • PySpark • SQL</div>
+        <div class="bg-zinc-800 p-6 rounded-2xl">Causal Inference • A/B Testing • CUPED</div>
+        <div class="bg-zinc-800 p-6 rounded-2xl">XGBoost • SHAP • Time-Series Forecasting</div>
+        <div class="bg-zinc-800 p-6 rounded-2xl">RAG • LLM • LangChain</div>
+        <div class="bg-zinc-800 p-6 rounded-2xl">Databricks • Azure • GCP • BigQuery</div>
+        <div class="bg-zinc-800 p-6 rounded-2xl">Product Analytics • Experimentation</div>
+        <div class="bg-zinc-800 p-6 rounded-2xl">Behavioral Modeling • Uplift • Simulation</div>
+        <div class="bg-zinc-800 p-6 rounded-2xl">Cross-Functional Leadership</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEYOND THE CODE (Hobbies) -->
+  <section id="beyond" class="py-24 bg-zinc-950">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-12 text-center">Beyond the Code</h2>
+      <div class="grid grid-cols-3 md:grid-cols-6 gap-8 text-center">
+        <div><i class="fas fa-drum text-5xl text-orange-400 mb-3"></i><p class="text-sm">Cincinnati Taiko</p></div>
+        <div><i class="fas fa-microphone text-5xl text-purple-400 mb-3"></i><p class="text-sm">NBC The Sing-Off</p></div>
+        <div><i class="fas fa-camel text-5xl text-amber-400 mb-3"></i><p class="text-sm">Camel Ride in Petra</p></div>
+        <div><i class="fas fa-seedling text-5xl text-green-400 mb-3"></i><p class="text-sm">Rare Plants</p></div>
+        <div><i class="fas fa-language text-5xl text-blue-400 mb-3"></i><p class="text-sm">Arabic + Japanese</p></div>
+        <div><i class="fas fa-puzzle-piece text-5xl text-rose-400 mb-3"></i><p class="text-sm">Word Games</p></div>
+        <div><i class="fas fa-plane text-5xl text-sky-400 mb-3"></i><p class="text-sm">Travel</p></div>
+        <div><i class="fas fa-palette text-5xl text-pink-400 mb-3"></i><p class="text-sm">Art + Fencing</p></div>
+        <div><i class="fas fa-brain text-5xl text-indigo-400 mb-3"></i><p class="text-sm">Responsible AI</p></div>
+        <div><i class="fas fa-globe text-5xl text-cyan-400 mb-3"></i><p class="text-sm">Metaverse</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-24 bg-zinc-900 text-center">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-8">Let's Connect</h2>
+      <a href="mailto:hollis.cuffie@gmail.com" class="text-3xl font-medium hover:text-blue-400">hollis.cuffie@gmail.com</a>
+    </div>
+  </section>
+
+  <footer class="py-8 text-center text-zinc-500 text-sm">
+    © 2026 Hollis Cuffie • Built with Tailwind + Particles.js
+  </footer>
 
   <script>
-    // Particles.js config - algorithm/neural-net style like Aditya's
+    // Particles (algorithm style)
     particlesJS("particles-js", {
-      "particles": {
-        "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
-        "color": { "value": "#60a5fa" },
-        "shape": { "type": "circle" },
-        "opacity": { "value": 0.6, "random": true },
-        "size": { "value": 3, "random": true },
-        "line_linked": {
-          "enable": true,
-          "distance": 150,
-          "color": "#60a5fa",
-          "opacity": 0.3,
-          "width": 1
-        },
-        "move": {
-          "enable": true,
-          "speed": 1.5,
-          "direction": "none",
-          "random": false,
-          "straight": false,
-          "out_mode": "out"
-        }
-      },
-      "interactivity": {
-        "detect_on": "canvas",
-        "events": {
-          "onhover": { "enable": true, "mode": "grab" },
-          "onclick": { "enable": true, "mode": "push" },
-          "resize": true
-        }
-      },
-      "retina_detect": true
+      particles: { number: { value: 80 }, color: { value: "#60a5fa" }, shape: { type: "circle" },
+        opacity: { value: 0.6 }, size: { value: 3 }, line_linked: { enable: true, distance: 150, color: "#60a5fa", opacity: 0.3, width: 1 },
+        move: { enable: true, speed: 1.5 } },
+      interactivity: { events: { onhover: { enable: true, mode: "grab" }, onclick: { enable: true, mode: "push" } } },
+      retina_detect: true
     });
 
-    // Typing animation
+    // Faster + Smaller Typing
     new Typed('#typed', {
-      strings: [
-        "A Senior Data Scientist",
-        "A Product Analytics Leader",
-        "A Causal Inference Expert",
-        "An ML Platform Owner",
-        "An Experimentation Strategist"
-      ],
-      typeSpeed: 60,
+      strings: ["A Senior Data Scientist", "A Product Analytics Leader", "A Causal Inference Expert", "An ML Platform Owner", "An Experimentation Strategist", "A Creative Problem Solver"],
+      typeSpeed: 50,
       backSpeed: 40,
-      backDelay: 1800,
+      backDelay: 1400,
       loop: true,
       showCursor: true,
       cursorChar: '|'
