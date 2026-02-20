@@ -1,0 +1,2 @@
+User-agent: *
+Disallow: /assets/Hollis_Cuffie_Resume.pdf
