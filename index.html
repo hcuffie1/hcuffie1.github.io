@@ -71,14 +71,14 @@
     </div>
   </section>
 
-  <!-- TIMELINE -->
-  <section id="timeline" class="py-24 bg-zinc-950">
+  <!-- TIMELINE (tightened spacing) -->
+  <section id="timeline" class="py-16 bg-zinc-950">
     <div class="max-w-4xl mx-auto px-6">
-      <h2 class="text-4xl font-bold mb-16 text-center">My Journey</h2>
+      <h2 class="text-4xl font-bold mb-12 text-center">My Journey</h2>
       <div class="relative">
         <div class="absolute left-1/2 top-8 bottom-8 w-0.5 bg-gradient-to-b from-blue-500 to-blue-600 hidden md:block"></div>
 
-        <div class="timeline-item flex flex-col md:flex-row items-center mb-20 relative" data-order="1">
+        <div class="timeline-item flex flex-col md:flex-row items-center mb-16 relative" data-order="1">
           <div class="md:w-1/2 md:text-right pr-12">
             <div class="inline-flex items-center justify-center w-20 h-20 bg-blue-600 rounded-full text-white font-bold text-xl border-4 border-zinc-900">P&amp;G</div>
             <h3 class="text-2xl font-semibold mt-4">Senior Data Scientist</h3>
@@ -94,7 +94,7 @@
           </div>
         </div>
 
-        <div class="timeline-item flex flex-col md:flex-row items-center mb-20 relative" data-order="2">
+        <div class="timeline-item flex flex-col md:flex-row items-center mb-16 relative" data-order="2">
           <div class="md:w-1/2 md:text-right pr-12">
             <div class="inline-flex items-center justify-center w-20 h-20 bg-blue-600 rounded-full text-white font-bold text-xl border-4 border-zinc-900">P&amp;G</div>
             <h3 class="text-2xl font-semibold mt-4">Embedded Lead Data Scientist</h3>
@@ -109,7 +109,7 @@
           </div>
         </div>
 
-        <div class="timeline-item flex flex-col md:flex-row items-center mb-20 relative" data-order="3">
+        <div class="timeline-item flex flex-col md:flex-row items-center mb-16 relative" data-order="3">
           <div class="md:w-1/2 md:text-right pr-12">
             <div class="inline-flex items-center justify-center w-20 h-20 bg-blue-600 rounded-full text-white font-bold text-xl border-4 border-zinc-900">P&amp;G</div>
             <h3 class="text-2xl font-semibold mt-4">Analytics & Insights Manager</h3>
@@ -124,7 +124,7 @@
           </div>
         </div>
 
-        <div class="timeline-item flex flex-col md:flex-row items-center mb-20 relative" data-order="4">
+        <div class="timeline-item flex flex-col md:flex-row items-center mb-16 relative" data-order="4">
           <div class="md:w-1/2 md:text-right pr-12">
             <div class="inline-flex items-center justify-center w-20 h-20 bg-emerald-600 rounded-full text-white text-3xl border-4 border-zinc-900">🐘</div>
             <h3 class="text-2xl font-semibold mt-4">Business Analyst, Product Team</h3>
@@ -143,7 +143,7 @@
   </section>
 
   <!-- SKILLS (with particles) -->
-  <section id="skills" class="py-20 bg-zinc-950 relative overflow-hidden">
+  <section id="skills" class="py-16 bg-zinc-950 relative overflow-hidden">
     <div id="skills-particles"></div>
     <div class="max-w-5xl mx-auto px-6 relative z-10">
       <h2 class="text-4xl font-bold mb-12 text-center">Skills & Tools</h2>
@@ -190,7 +190,7 @@
     </div>
   </section>
 
-  <!-- CONTACT FORM (with particles behind) -->
+  <!-- CONTACT FORM (with particles) -->
   <section id="contact" class="py-24 bg-zinc-900 relative overflow-hidden">
     <div id="contact-particles"></div>
     <div class="max-w-2xl mx-auto px-6 relative z-10">
@@ -227,16 +227,16 @@
       retina_detect: true
     });
 
-    // Skills particles
+    // Skills particles (more visible)
     particlesJS("skills-particles", {
-      particles: { number: { value: 60 }, color: { value: "#60a5fa" }, shape: { type: "circle" }, opacity: { value: 0.4 }, size: { value: 2.5 }, line_linked: { enable: true, distance: 120, color: "#60a5fa", opacity: 0.2, width: 1 }, move: { enable: true, speed: 1 } },
+      particles: { number: { value: 90 }, color: { value: "#60a5fa" }, shape: { type: "circle" }, opacity: { value: 0.5 }, size: { value: 3 }, line_linked: { enable: true, distance: 140, color: "#60a5fa", opacity: 0.25, width: 1 }, move: { enable: true, speed: 1.2 } },
       interactivity: { events: { onhover: { enable: true, mode: "grab" } } },
       retina_detect: true
     });
 
     // Contact particles
     particlesJS("contact-particles", {
-      particles: { number: { value: 50 }, color: { value: "#60a5fa" }, shape: { type: "circle" }, opacity: { value: 0.35 }, size: { value: 2.5 }, line_linked: { enable: true, distance: 120, color: "#60a5fa", opacity: 0.2, width: 1 }, move: { enable: true, speed: 1 } },
+      particles: { number: { value: 70 }, color: { value: "#60a5fa" }, shape: { type: "circle" }, opacity: { value: 0.45 }, size: { value: 2.8 }, line_linked: { enable: true, distance: 130, color: "#60a5fa", opacity: 0.22, width: 1 }, move: { enable: true, speed: 1.1 } },
       interactivity: { events: { onhover: { enable: true, mode: "grab" } } },
       retina_detect: true
     });
