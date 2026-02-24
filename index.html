@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hollis Cuffie | Senior Data Scientist</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <style>
+    #particles-js, #skills-particles, #contact-particles { position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: -1; }
+    .hero-photo { transition: all 0.4s ease; }
+    .hero-photo:hover { transform: scale(1.05); box-shadow: 0 0 50px rgba(59, 130, 246, 0.7); }
+    .timeline-item { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+    .timeline-item.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body class="bg-zinc-950 text-zinc-200 overflow-x-hidden">
+
+  <div id="particles-js"></div>
+
+  <!-- NAV -->
+  <nav class="fixed top-0 w-full bg-zinc-900/90 backdrop-blur-md z-50 border-b border-zinc-800">
+    <div class="max-w-5xl mx-auto px-6 py-5 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Hollis Cuffie</h1>
+      <div class="flex gap-8 text-sm font-medium">
+        <a href="#about" class="hover:text-blue-400 transition">About</a>
+        <a href="#timeline" class="hover:text-blue-400 transition">Journey</a>
+        <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
+        <a href="#beyond" class="hover:text-blue-400 transition">Beyond Work</a>
+        <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="min-h-screen flex items-center pt-20 relative">
+    <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+      <img src="assets/profile.jpg" alt="Hollis Cuffie" class="hero-photo mx-auto w-64 h-64 rounded-full border-4 border-blue-500 object-cover shadow-2xl mb-8">
+      <h1 class="text-6xl md:text-7xl font-bold tracking-tight">Hollis Cuffie</h1>
+      <div class="mt-4 text-3xl md:text-4xl font-medium text-blue-400 h-12">
+        <span id="typed"></span>
+      </div>
+      <p class="mt-8 max-w-2xl mx-auto text-lg text-zinc-400">
+        Senior Data Scientist building production ML systems and causal frameworks that drive tens of millions in impact.
+      </p>
+      <div class="mt-10 flex gap-4 justify-center flex-wrap">
+        <a href="https://linkedin.com/in/hcuffie" target="_blank" class="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-full font-medium flex items-center gap-2 transition">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://github.com/hcuffie1" target="_blank" class="px-8 py-4 border border-zinc-700 hover:border-white rounded-full font-medium flex items-center gap-2 transition">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="assets/Hollis_Cuffie_Resume.pdf" download class="px-8 py-4 bg-emerald-600 hover:bg-emerald-700 rounded-full font-medium flex items-center gap-2 transition">
+          <i class="fas fa-download"></i> Download CV
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-24 bg-zinc-900">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-8">About Me</h2>
+      <p class="max-w-2xl mx-auto text-lg text-zinc-400">
+        Senior Data Scientist with 5+ years driving high-impact analytics and experimentation in retail and consumer marketplaces. 
+        I own end-to-end analytical frameworks that shape product roadmaps, prioritize investments, and deliver tens of millions in incremental lift/revenue.
+      </p>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section id="timeline" class="py-16 bg-zinc-950">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-12 text-center">My Journey</h2>
+      <div class="relative">
+        <div class="absolute left-1/2 top-8 bottom-8 w-0.5 bg-gradient-to-b from-blue-500 to-blue-600 hidden md:block"></div>
+
+        <div class="timeline-item flex flex-col md:flex-row items-center mb-16 relative" data-order="1">
+          <div class="md:w-1/2 md:text-right pr-12">
+            <div class="inline-flex items-center justify-center w-20 h-20 bg-blue-600 rounded-full text-white font-bold text-xl border-4 border-zinc-900">P&amp;G</div>
+            <h3 class="text-2xl font-semibold mt-4">Senior Data Scientist</h3>
+            <p class="text-blue-400">Jul 2024 – Present</p>
+          </div>
+          <div class="md:w-1/2 pl-12">
+            <div class="flex flex-wrap gap-2">
+              <span class="px-4 py-1 bg-zinc-800 rounded-full text-xs">Enterprise ML Platform</span>
+              <span class="px-4 py-1 bg-zinc-800 rounded-full text-xs">Causal Inference</span>
+              <span class="px-4 py-1 bg-zinc-800 rounded-full text-xs">Time-Series Forecasting</span>
+              <span class="px-4 py-1 bg-zinc-800 rounded-full text-xs">RAG Systems</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item flex flex-col md:flex-row items-center mb-16 relative" data-order="2">
+          <div class="md:w-1/2 md:text-right pr-12">
+            <div class="inline-flex items-center justify-center w-20 h-20 bg-blue-600 rounded-full text-white font-bold text-xl border-4 border-zinc-900">P&amp;G</div>
+            <h3 class="text-2xl font-semibold mt-4">Embedded Lead Data Scientist</h3>
+            <p class="text-blue-400">Aug 2022 – Jul 2024</p>
+          </div>
+          <div class="md:w-1/2 pl-12">
+            <div class="flex flex-wrap gap-2">
+              <span class="px-4 py-1 bg-zinc-800 rounded-full text-xs">Market-Scale Experimentation</span>
+              <span class="px-4 py-1 bg-zinc-800 rounded-full text-xs">GenAI LLM</span>
+              <span class="px-4 py-1 bg-zinc-800 rounded-full text-xs">LLM Observability</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item flex flex-col md:flex-row items-center mb-16 relative" data-order="3">
+          <div class="md:w-1/2 md:text-right pr-12">
+            <div class="inline-flex items-center justify-center w-20 h-20 bg-blue-600 rounded-full text-white font-bold text-xl border-4 border-zinc-900">P&amp;G</div>
+            <h3 class="text-2xl font-semibold mt-4">Analytics & Insights Manager</h3>
+            <p class="text-blue-400">Aug 2020 – Aug 2022</p>
+          </div>
+          <div class="md:w-1/2 pl-12">
+            <div class="flex flex-wrap gap-2">
+              <span class="px-4 py-1 bg-zinc-800 rounded-full text-xs">Product Analytics</span>
+              <span class="px-4 py-1 bg-zinc-800 rounded-full text-xs">A/B Testing</span>
+              <span class="px-4 py-1 bg-zinc-800 rounded-full text-xs">Behavioral Modeling</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item flex flex-col md:flex-row items-center mb-16 relative" data-order="4">
+          <div class="md:w-1/2 md:text-right pr-12">
+            <div class="inline-flex items-center justify-center w-20 h-20 bg-emerald-600 rounded-full text-white text-3xl border-4 border-zinc-900">🐘</div>
+            <h3 class="text-2xl font-semibold mt-4">Business Analyst, Product Team</h3>
+            <p class="text-blue-400">One Kings Lane • May 2019 – Apr 2020</p>
+          </div>
+          <div class="md:w-1/2 pl-12">
+            <div class="flex flex-wrap gap-2">
+              <span class="px-4 py-1 bg-zinc-800 rounded-full text-xs">Mobile App Analytics</span>
+              <span class="px-4 py-1 bg-zinc-800 rounded-full text-xs">ML Search Optimization</span>
+              <span class="px-4 py-1 bg-zinc-800 rounded-full text-xs">Topic Modeling</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS (with particles) -->
+  <section id="skills" class="py-16 bg-zinc-950 relative overflow-hidden">
+    <div id="skills-particles"></div>
+    <div class="max-w-5xl mx-auto px-6 relative z-10">
+      <h2 class="text-4xl font-bold mb-12 text-center">Skills & Tools</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div class="bg-zinc-900/80 backdrop-blur p-6 rounded-2xl">Python • PySpark • SQL</div>
+        <div class="bg-zinc-900/80 backdrop-blur p-6 rounded-2xl">Causal Inference • A/B Testing • CUPED</div>
+        <div class="bg-zinc-900/80 backdrop-blur p-6 rounded-2xl">XGBoost • SHAP • Time-Series Forecasting</div>
+        <div class="bg-zinc-900/80 backdrop-blur p-6 rounded-2xl">RAG • LLM • LangChain</div>
+        <div class="bg-zinc-900/80 backdrop-blur p-6 rounded-2xl">Databricks • Azure • GCP • BigQuery</div>
+        <div class="bg-zinc-900/80 backdrop-blur p-6 rounded-2xl">Product Analytics • Experimentation</div>
+        <div class="bg-zinc-900/80 backdrop-blur p-6 rounded-2xl">Behavioral Modeling • Uplift • Simulation</div>
+        <div class="bg-zinc-900/80 backdrop-blur p-6 rounded-2xl">Cross-Functional Leadership</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEYOND THE CODE - CLEAN 3x6 GRID -->
+  <section id="beyond" class="py-24 bg-zinc-900">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-12">Beyond the Code</h2>
+      <div class="flex justify-center mb-12">
+        <img src="assets/memoji_hollis_wink_transparent.png" alt="Hollis" class="w-32 h-32 rounded-full border-4 border-blue-500 shadow-2xl">
+      </div>
+      <div class="grid grid-cols-3 md:grid-cols-6 gap-8">
+        <div class="flex flex-col items-center"><i class="fas fa-chain-broken text-5xl text-red-400 mb-3"></i><p class="text-sm">Abolition</p></div>
+        <div class="flex flex-col items-center"><i class="fas fa-paw text-5xl text-orange-400 mb-3"></i><p class="text-sm">Animal Rescue</p></div>
+        <div class="flex flex-col items-center"><i class="fas fa-language text-5xl text-blue-400 mb-3"></i><p class="text-sm">Arabic + Japanese</p></div>
+        <div class="flex flex-col items-center"><i class="fas fa-palette text-5xl text-pink-400 mb-3"></i><p class="text-sm">Art</p></div>
+        <div class="flex flex-col items-center"><i class="fas fa-drum text-5xl text-amber-400 mb-3"></i><p class="text-sm">Cincinnati Taiko</p></div>
+        <div class="flex flex-col items-center"><i class="fas fa-utensils text-5xl text-emerald-400 mb-3"></i><p class="text-sm">Good Food</p></div>
+        <div class="flex flex-col items-center"><i class="fas fa-vr-cardboard text-5xl text-purple-400 mb-3"></i><p class="text-sm">Metaverse</p></div>
+        <div class="flex flex-col items-center"><i class="fas fa-microphone text-5xl text-violet-400 mb-3"></i><p class="text-sm">NBC Sing-Off</p></div>
+        <div class="flex flex-col items-center"><i class="fas fa-seedling text-5xl text-green-400 mb-3"></i><p class="text-sm">Rare Plants</p></div>
+        <div class="flex flex-col items-center"><i class="fas fa-brain text-5xl text-indigo-400 mb-3"></i><p class="text-sm">Responsible AI</p></div>
+        <div class="flex flex-col items-center"><i class="fas fa-plane text-5xl text-sky-400 mb-3"></i><p class="text-sm">Travel</p></div>
+        <div class="flex flex-col items-center"><i class="fas fa-hands-holding-circle text-5xl text-amber-400 mb-3"></i><p class="text-sm">Volunteering</p></div>
+        <div class="flex flex-col items-center"><i class="fas fa-puzzle-piece text-5xl text-rose-400 mb-3"></i><p class="text-sm">Word Games</p></div>
+        <div class="flex flex-col items-center"><i class="fas fa-swimmer text-5xl text-cyan-400 mb-3"></i><p class="text-sm">Snorkeling</p></div>
+        <div class="flex flex-col items-center"><i class="fas fa-mountain text-5xl text-lime-400 mb-3"></i><p class="text-sm">Hiking</p></div>
+        <div class="flex flex-col items-center"><i class="fas fa-water text-5xl text-sky-400 mb-3"></i><p class="text-sm">Paddle Boarding</p></div>
+        <div class="flex flex-col items-center"><i class="fas fa-volleyball-ball text-5xl text-red-400 mb-3"></i><p class="text-sm">Volleyball</p></div>
+        <div class="flex flex-col items-center"><i class="fas fa-sword text-5xl text-violet-400 mb-3"></i><p class="text-sm">Fencing</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM (with particles) -->
+  <section id="contact" class="py-24 bg-zinc-900 relative overflow-hidden">
+    <div id="contact-particles"></div>
+    <div class="max-w-2xl mx-auto px-6 relative z-10">
+      <h2 class="text-4xl font-bold mb-4 text-center">Get in Touch</h2>
+      <p class="text-center text-zinc-400 mb-12">I'm always open to discussing new projects, creative ideas, or opportunities in data science and beyond. Feel free to reach out!</p>
+      
+      <form id="contactForm" class="space-y-6">
+        <div>
+          <label class="block text-sm font-medium mb-2">Your Name</label>
+          <input type="text" id="name" required class="w-full px-5 py-4 bg-zinc-800 border border-zinc-700 rounded-2xl focus:outline-none focus:border-blue-500">
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-2">Your Email</label>
+          <input type="email" id="email" required class="w-full px-5 py-4 bg-zinc-800 border border-zinc-700 rounded-2xl focus:outline-none focus:border-blue-500">
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-2">Your Message</label>
+          <textarea id="message" rows="6" required class="w-full px-5 py-4 bg-zinc-800 border border-zinc-700 rounded-2xl focus:outline-none focus:border-blue-500"></textarea>
+        </div>
+        <button type="submit" class="w-full py-4 bg-blue-600 hover:bg-blue-700 rounded-2xl font-medium transition">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="py-8 text-center text-zinc-500 text-sm">
+    © 2026 Hollis Cuffie • Built with Tailwind + Particles.js
+  </footer>
+
+  <script>
+    // Hero particles
+    particlesJS("particles-js", {
+      particles: { number: { value: 80 }, color: { value: "#60a5fa" }, shape: { type: "circle" }, opacity: { value: 0.6 }, size: { value: 3 }, line_linked: { enable: true, distance: 150, color: "#60a5fa", opacity: 0.3, width: 1 }, move: { enable: true, speed: 1.5 } },
+      interactivity: { events: { onhover: { enable: true, mode: "grab" }, onclick: { enable: true, mode: "push" } } },
+      retina_detect: true
+    });
+
+    // Skills particles
+    particlesJS("skills-particles", {
+      particles: { number: { value: 90 }, color: { value: "#60a5fa" }, shape: { type: "circle" }, opacity: { value: 0.5 }, size: { value: 3 }, line_linked: { enable: true, distance: 140, color: "#60a5fa", opacity: 0.25, width: 1 }, move: { enable: true, speed: 1.2 } },
+      interactivity: { events: { onhover: { enable: true, mode: "grab" } } },
+      retina_detect: true
+    });
+
+    // Contact particles
+    particlesJS("contact-particles", {
+      particles: { number: { value: 70 }, color: { value: "#60a5fa" }, shape: { type: "circle" }, opacity: { value: 0.45 }, size: { value: 2.8 }, line_linked: { enable: true, distance: 130, color: "#60a5fa", opacity: 0.22, width: 1 }, move: { enable: true, speed: 1.1 } },
+      interactivity: { events: { onhover: { enable: true, mode: "grab" } } },
+      retina_detect: true
+    });
+
+    // Typing
+    new Typed('#typed', {
+      strings: ["A Senior Data Scientist", "A Product Analytics Leader", "A Causal Inference Expert", "An ML Platform Owner", "An Experimentation Strategist", "A Creative Problem Solver"],
+      typeSpeed: 45, backSpeed: 35, backDelay: 1300, loop: true, showCursor: true, cursorChar: '|'
+    });
+
+    // Timeline bidirectional stagger
+    const items = document.querySelectorAll('.timeline-item');
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener('scroll', () => {
+      const currentScrollY = window.scrollY;
+      const scrollingDown = currentScrollY > lastScrollY;
+
+      items.forEach(item => {
+        const rect = item.getBoundingClientRect();
+        const inView = rect.top < window.innerHeight * 0.75 && rect.bottom > window.innerHeight * 0.25;
+
+        if (scrollingDown && inView) {
+          item.classList.add('visible');
+        } else if (!scrollingDown && rect.bottom < window.innerHeight * 0.35) {
+          item.classList.remove('visible');
+        }
+      });
+      lastScrollY = currentScrollY;
+    });
+
+    // Contact Form
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      window.location.href = `mailto:hollis.cuffie@gmail.com?subject=Message from ${name}&body=${encodeURIComponent(message)}%0A%0AFrom: ${email}`;
+      alert('Opening your email client — thanks for reaching out!');
+    });
+  </script>
+</body>
+</html>
