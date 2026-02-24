@@ -13,10 +13,15 @@
     #particles-js { position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: -1; }
     .hero-photo { transition: all 0.4s ease; }
     .hero-photo:hover { transform: scale(1.05); box-shadow: 0 0 50px rgba(59, 130, 246, 0.7); }
-    .timeline-node { transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
     .timeline-item { opacity: 0; transform: translateY(40px); transition: all 0.8s ease; }
     .timeline-item.visible { opacity: 1; transform: translateY(0); }
-    .timeline-node:hover { box-shadow: 0 0 25px rgba(59, 130, 246, 0.8); transform: scale(1.15); }
+    .beyond-ring { position: relative; width: 420px; height: 420px; margin: 0 auto; }
+    .beyond-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10; }
+    .beyond-icon { position: absolute; width: 60px; height: 60px; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; }
+    .beyond-icon:hover { transform: scale(2.2) !important; z-index: 20; }
+    .beyond-icon:hover ~ .beyond-icon { transform: scale(0.7); }
+    .beyond-label { position: absolute; bottom: -28px; left: 50%; transform: translateX(-50%); opacity: 0; transition: all 0.3s; white-space: nowrap; font-size: 13px; }
+    .beyond-icon:hover .beyond-label { opacity: 1; bottom: -38px; }
   </style>
 </head>
 <body class="bg-zinc-950 text-zinc-200 overflow-x-hidden">
@@ -73,19 +78,18 @@
     </div>
   </section>
 
-  <!-- ANIMATED TIMELINE -->
+  <!-- ANIMATED TIMELINE (with reverse on scroll up) -->
   <section id="timeline" class="py-24 bg-zinc-950">
     <div class="max-w-4xl mx-auto px-6">
       <h2 class="text-4xl font-bold mb-16 text-center">My Journey</h2>
       <div class="relative">
         <div class="absolute left-1/2 top-8 bottom-8 w-0.5 bg-gradient-to-b from-blue-500 to-blue-600 hidden md:block"></div>
 
-        <!-- Senior Data Scientist -->
         <div class="timeline-item flex flex-col md:flex-row items-center mb-20 relative">
           <div class="md:w-1/2 md:text-right pr-12">
-            <div class="timeline-node inline-flex items-center justify-center w-20 h-20 bg-blue-600 rounded-full text-white font-bold text-xl border-4 border-zinc-900 mx-auto md:mx-0">P&amp;G</div>
+            <div class="inline-flex items-center justify-center w-20 h-20 bg-blue-600 rounded-full text-white font-bold text-xl border-4 border-zinc-900">P&amp;G</div>
             <h3 class="text-2xl font-semibold mt-4">Senior Data Scientist</h3>
-            <p class="text-blue-400">Procter & Gamble • Jul 2024 – Present</p>
+            <p class="text-blue-400">Jul 2024 – Present</p>
           </div>
           <div class="md:w-1/2 pl-12">
             <div class="flex flex-wrap gap-2">
@@ -97,12 +101,11 @@
           </div>
         </div>
 
-        <!-- Embedded Lead -->
         <div class="timeline-item flex flex-col md:flex-row items-center mb-20 relative">
           <div class="md:w-1/2 md:text-right pr-12">
-            <div class="timeline-node inline-flex items-center justify-center w-20 h-20 bg-blue-600 rounded-full text-white font-bold text-xl border-4 border-zinc-900 mx-auto md:mx-0">P&amp;G</div>
+            <div class="inline-flex items-center justify-center w-20 h-20 bg-blue-600 rounded-full text-white font-bold text-xl border-4 border-zinc-900">P&amp;G</div>
             <h3 class="text-2xl font-semibold mt-4">Embedded Lead Data Scientist</h3>
-            <p class="text-blue-400">Procter & Gamble • Aug 2022 – Jul 2024</p>
+            <p class="text-blue-400">Aug 2022 – Jul 2024</p>
           </div>
           <div class="md:w-1/2 pl-12">
             <div class="flex flex-wrap gap-2">
@@ -113,12 +116,11 @@
           </div>
         </div>
 
-        <!-- Analytics Manager -->
         <div class="timeline-item flex flex-col md:flex-row items-center mb-20 relative">
           <div class="md:w-1/2 md:text-right pr-12">
-            <div class="timeline-node inline-flex items-center justify-center w-20 h-20 bg-blue-600 rounded-full text-white font-bold text-xl border-4 border-zinc-900 mx-auto md:mx-0">P&amp;G</div>
+            <div class="inline-flex items-center justify-center w-20 h-20 bg-blue-600 rounded-full text-white font-bold text-xl border-4 border-zinc-900">P&amp;G</div>
             <h3 class="text-2xl font-semibold mt-4">Analytics & Insights Manager</h3>
-            <p class="text-blue-400">Procter & Gamble • Aug 2020 – Aug 2022</p>
+            <p class="text-blue-400">Aug 2020 – Aug 2022</p>
           </div>
           <div class="md:w-1/2 pl-12">
             <div class="flex flex-wrap gap-2">
@@ -129,10 +131,9 @@
           </div>
         </div>
 
-        <!-- One Kings Lane -->
         <div class="timeline-item flex flex-col md:flex-row items-center mb-20 relative">
           <div class="md:w-1/2 md:text-right pr-12">
-            <div class="timeline-node inline-flex items-center justify-center w-20 h-20 bg-emerald-600 rounded-full text-white text-3xl border-4 border-zinc-900 mx-auto md:mx-0">🐘</div>
+            <div class="inline-flex items-center justify-center w-20 h-20 bg-emerald-600 rounded-full text-white text-3xl border-4 border-zinc-900">🐘</div>
             <h3 class="text-2xl font-semibold mt-4">Business Analyst, Product Team</h3>
             <p class="text-blue-400">One Kings Lane • May 2019 – Apr 2020</p>
           </div>
@@ -165,21 +166,29 @@
     </div>
   </section>
 
-  <!-- BEYOND WORK -->
+  <!-- BEYOND WORK - MEMOJI CENTER + DOCK-STYLE RING -->
   <section id="beyond" class="py-24 bg-zinc-950">
-    <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-4xl font-bold mb-12 text-center">Beyond the Code</h2>
-      <div class="grid grid-cols-3 md:grid-cols-6 gap-8 text-center">
-        <div><i class="fas fa-drum text-5xl text-orange-400 mb-3"></i><p class="text-sm">Cincinnati Taiko</p></div>
-        <div><i class="fas fa-microphone text-5xl text-purple-400 mb-3"></i><p class="text-sm">NBC The Sing-Off</p></div>
-        <div><i class="fas fa-seedling text-5xl text-green-400 mb-3"></i><p class="text-sm">Rare Plants</p></div>
-        <div><i class="fas fa-language text-5xl text-blue-400 mb-3"></i><p class="text-sm">Arabic + Japanese</p></div>
-        <div><i class="fas fa-puzzle-piece text-5xl text-rose-400 mb-3"></i><p class="text-sm">Word Games</p></div>
-        <div><i class="fas fa-plane text-5xl text-sky-400 mb-3"></i><p class="text-sm">Travel</p></div>
-        <div><i class="fas fa-palette text-5xl text-pink-400 mb-3"></i><p class="text-sm">Art + Fencing</p></div>
-        <div><i class="fas fa-brain text-5xl text-indigo-400 mb-3"></i><p class="text-sm">Responsible AI</p></div>
-        <div><i class="fas fa-globe text-5xl text-cyan-400 mb-3"></i><p class="text-sm">Metaverse</p></div>
-        <div><i class="fas fa-hands-holding-circle text-5xl text-amber-400 mb-3"></i><p class="text-sm">Volunteering</p></div>
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-16">Beyond the Code</h2>
+      
+      <div class="beyond-ring mx-auto relative">
+        <!-- Center Memoji -->
+        <img src="assets/memoji_hollis_wink_transparent.png" alt="Hollis Memoji" class="beyond-center w-40 h-40 rounded-full border-4 border-blue-500 shadow-2xl">
+
+        <!-- Icon Ring -->
+        <div class="beyond-icon" style="top: 8%; left: 50%; transform: translate(-50%, -50%);"><i class="fas fa-chain-broken text-5xl text-red-400"></i><div class="beyond-label">Abolition</div></div>
+        <div class="beyond-icon" style="top: 20%; left: 80%; transform: translate(-50%, -50%);"><i class="fas fa-paw text-5xl text-orange-400"></i><div class="beyond-label">Animal Rescue</div></div>
+        <div class="beyond-icon" style="top: 35%; left: 90%; transform: translate(-50%, -50%);"><i class="fas fa-language text-5xl text-blue-400"></i><div class="beyond-label">Arabic + Japanese</div></div>
+        <div class="beyond-icon" style="top: 55%; left: 92%; transform: translate(-50%, -50%);"><i class="fas fa-palette text-5xl text-pink-400"></i><div class="beyond-label">Art + Fencing</div></div>
+        <div class="beyond-icon" style="top: 72%; left: 80%; transform: translate(-50%, -50%);"><i class="fas fa-drum text-5xl text-amber-400"></i><div class="beyond-label">Cincinnati Taiko</div></div>
+        <div class="beyond-icon" style="top: 85%; left: 50%; transform: translate(-50%, -50%);"><i class="fas fa-utensils text-5xl text-emerald-400"></i><div class="beyond-label">Good Food</div></div>
+        <div class="beyond-icon" style="top: 72%; left: 20%; transform: translate(-50%, -50%);"><i class="fas fa-vr-cardboard text-5xl text-purple-400"></i><div class="beyond-label">Metaverse</div></div>
+        <div class="beyond-icon" style="top: 55%; left: 8%; transform: translate(-50%, -50%);"><i class="fas fa-microphone text-5xl text-violet-400"></i><div class="beyond-label">NBC Sing-Off</div></div>
+        <div class="beyond-icon" style="top: 35%; left: 10%; transform: translate(-50%, -50%);"><i class="fas fa-seedling text-5xl text-green-400"></i><div class="beyond-label">Rare Plants</div></div>
+        <div class="beyond-icon" style="top: 20%; left: 20%; transform: translate(-50%, -50%);"><i class="fas fa-brain text-5xl text-indigo-400"></i><div class="beyond-label">Responsible AI</div></div>
+        <div class="beyond-icon" style="top: 8%; left: 50%; transform: translate(-50%, -50%);"><i class="fas fa-plane text-5xl text-sky-400"></i><div class="beyond-label">Travel</div></div>
+        <div class="beyond-icon" style="top: 35%; left: 50%; transform: translate(-50%, -50%);"><i class="fas fa-hands-holding-circle text-5xl text-amber-400"></i><div class="beyond-label">Volunteering</div></div>
+        <div class="beyond-icon" style="top: 55%; left: 50%; transform: translate(-50%, -50%);"><i class="fas fa-puzzle-piece text-5xl text-rose-400"></i><div class="beyond-label">Word Games</div></div>
       </div>
     </div>
   </section>
@@ -197,29 +206,27 @@
   </footer>
 
   <script>
-    // Particles - small blue connected style (fixed)
+    // Small elegant blue particles (fixed)
     particlesJS("particles-js", {
-      "particles": {
-        "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
-        "color": { "value": "#60a5fa" },
-        "shape": { "type": "circle" },
-        "opacity": { "value": 0.6, "random": true },
-        "size": { "value": 3, "random": true },
-        "line_linked": { "enable": true, "distance": 150, "color": "#60a5fa", "opacity": 0.3, "width": 1 },
-        "move": { "enable": true, "speed": 1.5, "direction": "none", "random": false, "straight": false, "out_mode": "out" }
+      particles: {
+        number: { value: 80 },
+        color: { value: "#60a5fa" },
+        shape: { type: "circle" },
+        opacity: { value: 0.6, random: true },
+        size: { value: 3, random: true },
+        line_linked: { enable: true, distance: 150, color: "#60a5fa", opacity: 0.3, width: 1 },
+        move: { enable: true, speed: 1.5 }
       },
-      "interactivity": {
-        "detect_on": "canvas",
-        "events": {
-          "onhover": { "enable": true, "mode": "grab" },
-          "onclick": { "enable": true, "mode": "push" },
-          "resize": true
+      interactivity: {
+        events: {
+          onhover: { enable: true, mode: "grab" },
+          onclick: { enable: true, mode: "push" }
         }
       },
-      "retina_detect": true
+      retina_detect: true
     });
 
-    // Typing (faster & smaller)
+    // Typing
     new Typed('#typed', {
       strings: ["A Senior Data Scientist", "A Product Analytics Leader", "A Causal Inference Expert", "An ML Platform Owner", "An Experimentation Strategist", "A Creative Problem Solver"],
       typeSpeed: 45,
@@ -230,14 +237,24 @@
       cursorChar: '|'
     });
 
-    // Timeline smooth animation
+    // Timeline bidirectional animation
     const items = document.querySelectorAll('.timeline-item');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
+    let lastScroll = window.scrollY;
+
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.scrollY;
+      const scrollingDown = currentScroll > lastScroll;
+
+      items.forEach(item => {
+        const rect = item.getBoundingClientRect();
+        if (scrollingDown && rect.top < window.innerHeight * 0.8) {
+          item.classList.add('visible');
+        } else if (!scrollingDown && rect.bottom < window.innerHeight * 0.2) {
+          item.classList.remove('visible');
+        }
       });
-    }, { threshold: 0.3 });
-    items.forEach(item => observer.observe(item));
+      lastScroll = currentScroll;
+    });
   </script>
 </body>
 </html>
