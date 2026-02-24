@@ -13,19 +13,17 @@
     #particles-js { position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: -1; }
     .hero-photo { transition: all 0.4s ease; }
     .hero-photo:hover { transform: scale(1.05); box-shadow: 0 0 50px rgba(59, 130, 246, 0.7); }
-    
-    /* Timeline */
     .timeline-item { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
     .timeline-item.visible { opacity: 1; transform: translateY(0); }
-
-    /* Beyond Work - Concentric Rings */
-    .beyond-ring { position: relative; width: 460px; height: 460px; margin: 0 auto; }
-    .beyond-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 68px; height: 68px; background: #1e40af; border: 4px solid #3b82f6; border-radius: 9999px; z-index: 20; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .beyond-ring { position: relative; width: 520px; height: 520px; margin: 0 auto; }
+    .beyond-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 82px; height: 82px; background: #1e40af; border: 4px solid #3b82f6; border-radius: 9999px; z-index: 30; overflow: hidden; }
     .beyond-icon { position: absolute; width: 68px; height: 68px; border-radius: 9999px; display: flex; align-items: center; justify-content: center; font-size: 32px; transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1); cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
-    .beyond-icon:hover { transform: scale(2.1) !important; z-index: 30; }
-    .beyond-icon:hover ~ .beyond-icon { transform: scale(0.72); }
-    .beyond-label { position: absolute; bottom: -26px; left: 50%; transform: translateX(-50%); opacity: 0; font-size: 13px; white-space: nowrap; transition: all 0.3s; font-weight: 500; }
-    .beyond-icon:hover .beyond-label { opacity: 1; bottom: -34px; }
+    .beyond-icon:hover { transform: scale(2.15) !important; z-index: 40; }
+    .beyond-icon:hover ~ .beyond-icon { transform: scale(0.75); }
+    .beyond-label { position: absolute; bottom: -28px; left: 50%; transform: translateX(-50%); opacity: 0; font-size: 13px; white-space: nowrap; transition: all 0.3s; font-weight: 500; }
+    .beyond-icon:hover .beyond-label { opacity: 1; bottom: -36px; }
+    /* Mesh lines */
+    .mesh-lines { position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; transform: translate(-50%, -50%); pointer-events: none; }
   </style>
 </head>
 <body class="bg-zinc-950 text-zinc-200 overflow-x-hidden">
@@ -89,6 +87,7 @@
       <div class="relative">
         <div class="absolute left-1/2 top-8 bottom-8 w-0.5 bg-gradient-to-b from-blue-500 to-blue-600 hidden md:block"></div>
 
+        <!-- The 4 timeline items are the same as before with data-order for reverse fade -->
         <div class="timeline-item flex flex-col md:flex-row items-center mb-20 relative" data-order="1">
           <div class="md:w-1/2 md:text-right pr-12">
             <div class="inline-flex items-center justify-center w-20 h-20 bg-blue-600 rounded-full text-white font-bold text-xl border-4 border-zinc-900">P&amp;G</div>
@@ -170,19 +169,19 @@
     </div>
   </section>
 
-  <!-- BEYOND WORK - CLEAN CONCENTRIC RINGS -->
+  <!-- BEYOND WORK - CLEAN CONCENTRIC RINGS WITH MESH -->
   <section id="beyond" class="py-24 bg-zinc-950">
     <div class="max-w-5xl mx-auto px-6 text-center">
       <h2 class="text-4xl font-bold mb-16">Beyond the Code</h2>
       <div class="beyond-ring mx-auto relative">
-        <!-- Center Memoji - same size, filled blue circle -->
+        <!-- Center Memoji - slightly larger, same blue filled circle -->
         <div class="beyond-center">
           <img src="assets/memoji_hollis_wink_transparent.png" alt="Hollis" class="w-full h-full rounded-full">
         </div>
 
         <!-- Inner Ring (8 icons) -->
-        <div class="beyond-icon" style="top: 22%; left: 50%; transform: translate(-50%, -50%); background: #1e40af; color: white;"><i class="fas fa-chain-broken"></i><div class="beyond-label">Abolition</div></div>
-        <div class="beyond-icon" style="top: 32%; left: 78%; transform: translate(-50%, -50%); background: #f59e0b; color: white;"><i class="fas fa-paw"></i><div class="beyond-label">Animal Rescue</div></div>
+        <div class="beyond-icon" style="top: 18%; left: 50%; transform: translate(-50%, -50%); background: #1e40af; color: white;"><i class="fas fa-chain-broken"></i><div class="beyond-label">Abolition</div></div>
+        <div class="beyond-icon" style="top: 28%; left: 78%; transform: translate(-50%, -50%); background: #f59e0b; color: white;"><i class="fas fa-paw"></i><div class="beyond-label">Animal Rescue</div></div>
         <div class="beyond-icon" style="top: 42%; left: 88%; transform: translate(-50%, -50%); background: #3b82f6; color: white;"><i class="fas fa-language"></i><div class="beyond-label">Arabic + Japanese</div></div>
         <div class="beyond-icon" style="top: 58%; left: 88%; transform: translate(-50%, -50%); background: #ec4899; color: white;"><i class="fas fa-palette"></i><div class="beyond-label">Art</div></div>
         <div class="beyond-icon" style="top: 72%; left: 78%; transform: translate(-50%, -50%); background: #eab308; color: white;"><i class="fas fa-drum"></i><div class="beyond-label">Cincinnati Taiko</div></div>
@@ -209,11 +208,27 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="py-24 bg-zinc-900 text-center">
-    <div class="max-w-4xl mx-auto px-6">
-      <h2 class="text-4xl font-bold mb-8">Let's Connect</h2>
-      <a href="mailto:hollis.cuffie@gmail.com" class="text-3xl font-medium hover:text-blue-400">hollis.cuffie@gmail.com</a>
+  <!-- CONTACT FORM -->
+  <section id="contact" class="py-24 bg-zinc-900">
+    <div class="max-w-2xl mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-4 text-center">Get in Touch</h2>
+      <p class="text-center text-zinc-400 mb-12">I'm always open to discussing new projects, creative ideas, or opportunities in data science and beyond. Feel free to reach out!</p>
+      
+      <form id="contactForm" class="space-y-6">
+        <div>
+          <label class="block text-sm font-medium mb-2">Your Name</label>
+          <input type="text" id="name" required class="w-full px-5 py-4 bg-zinc-800 border border-zinc-700 rounded-2xl focus:outline-none focus:border-blue-500">
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-2">Your Email</label>
+          <input type="email" id="email" required class="w-full px-5 py-4 bg-zinc-800 border border-zinc-700 rounded-2xl focus:outline-none focus:border-blue-500">
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-2">Your Message</label>
+          <textarea id="message" rows="6" required class="w-full px-5 py-4 bg-zinc-800 border border-zinc-700 rounded-2xl focus:outline-none focus:border-blue-500"></textarea>
+        </div>
+        <button type="submit" class="w-full py-4 bg-blue-600 hover:bg-blue-700 rounded-2xl font-medium transition">Send Message</button>
+      </form>
     </div>
   </section>
 
@@ -222,6 +237,7 @@
   </footer>
 
   <script>
+    // Particles - small elegant blue
     particlesJS("particles-js", {
       particles: {
         number: { value: 80 },
@@ -241,6 +257,7 @@
       retina_detect: true
     });
 
+    // Typing
     new Typed('#typed', {
       strings: ["A Senior Data Scientist", "A Product Analytics Leader", "A Causal Inference Expert", "An ML Platform Owner", "An Experimentation Strategist", "A Creative Problem Solver"],
       typeSpeed: 45,
@@ -259,7 +276,7 @@
       const currentScrollY = window.scrollY;
       const scrollingDown = currentScrollY > lastScrollY;
 
-      items.forEach((item, index) => {
+      items.forEach(item => {
         const rect = item.getBoundingClientRect();
         const inView = rect.top < window.innerHeight * 0.75 && rect.bottom > window.innerHeight * 0.25;
 
@@ -270,6 +287,16 @@
         }
       });
       lastScrollY = currentScrollY;
+    });
+
+    // Contact Form
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      window.location.href = `mailto:hollis.cuffie@gmail.com?subject=Message from ${name}&body=${encodeURIComponent(message)}%0A%0AFrom: ${email}`;
+      alert('Opening your email client to send the message. Thanks for reaching out!');
     });
   </script>
 </body>
