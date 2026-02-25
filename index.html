@@ -7,15 +7,10 @@
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <style>
-    #particles-js, #skills-particles, #contact-particles { 
-      position: absolute; 
-      width: 100%; 
-      height: 100%; 
-      top: 0; 
-      left: 0; 
-      z-index: -1; 
-    }
+    #particles-js, #skills-particles, #contact-particles { position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: -1; }
     .hero-photo { transition: all 0.4s ease; }
     .hero-photo:hover { transform: scale(1.05); box-shadow: 0 0 50px rgba(59, 130, 246, 0.7); }
     .timeline-item { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
@@ -23,6 +18,8 @@
   </style>
 </head>
 <body class="bg-zinc-950 text-zinc-200 overflow-x-hidden">
+
+  <div id="particles-js"></div>
 
   <!-- NAV -->
   <nav class="fixed top-0 w-full bg-zinc-900/90 backdrop-blur-md z-50 border-b border-zinc-800">
@@ -39,8 +36,7 @@
   </nav>
 
   <!-- HERO -->
-  <section class="min-h-screen flex items-center pt-20 relative overflow-hidden">
-    <div id="particles-js"></div>
+  <section class="min-h-screen flex items-center pt-20 relative">
     <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
       <img src="assets/profile.jpg" alt="Hollis Cuffie" class="hero-photo mx-auto w-64 h-64 rounded-full border-4 border-blue-500 object-cover shadow-2xl mb-8">
       <h1 class="text-6xl md:text-7xl font-bold tracking-tight">Hollis Cuffie</h1>
@@ -146,7 +142,7 @@
     </div>
   </section>
 
-  <!-- SKILLS -->
+  <!-- SKILLS (with particles) -->
   <section id="skills" class="py-16 bg-zinc-950 relative overflow-hidden">
     <div id="skills-particles"></div>
     <div class="max-w-5xl mx-auto px-6 relative z-10">
@@ -164,7 +160,7 @@
     </div>
   </section>
 
-  <!-- BEYOND THE CODE -->
+  <!-- BEYOND THE CODE - WIDE 3-ROW GRID WITH FILLED COLORED CIRCLES -->
   <section id="beyond" class="py-24 bg-zinc-900">
     <div class="max-w-6xl mx-auto px-6 text-center">
       <h2 class="text-4xl font-bold mb-12">Beyond the Code</h2>
@@ -189,7 +185,7 @@
         <div class="flex flex-col items-center"><div class="w-16 h-16 bg-lime-500 rounded-full flex items-center justify-center text-3xl"><i class="fas fa-mountain"></i></div><p class="text-sm mt-2">Hiking</p></div>
         <div class="flex flex-col items-center"><div class="w-16 h-16 bg-sky-500 rounded-full flex items-center justify-center text-3xl"><i class="fas fa-water"></i></div><p class="text-sm mt-2">Paddle Boarding</p></div>
         <div class="flex flex-col items-center"><div class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center text-3xl"><i class="fas fa-volleyball-ball"></i></div><p class="text-sm mt-2">Volleyball</p></div>
-        <div class="flex flex-col items-center"><div class="w-16 h-16 bg-violet-500 rounded-full flex items-center justify-center text-4xl">⚔️</div><p class="text-sm mt-2">Fencing</p></div>
+        <div class="flex flex-col items-center"><div class="w-16 h-16 bg-violet-500 rounded-full flex items-center justify-center text-3xl"><i class="fas fa-sword"></i></div><p class="text-sm mt-2">Fencing</p></div>
         <div class="flex flex-col items-center"><div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center text-3xl"><i class="fas fa-frog"></i></div><p class="text-sm mt-2">Duolingo</p></div>
         <div class="flex flex-col items-center"><div class="w-16 h-16 bg-pink-500 rounded-full flex items-center justify-center text-3xl"><i class="fas fa-heart"></i></div><p class="text-sm mt-2">Reproductive Justice</p></div>
         <div class="flex flex-col items-center"><div class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center text-3xl"><i class="fas fa-music"></i></div><p class="text-sm mt-2">Karaoke</p></div>
@@ -200,13 +196,13 @@
         <div class="flex flex-col items-center"><div class="w-16 h-16 bg-amber-500 rounded-full flex items-center justify-center text-3xl"><i class="fas fa-hammer"></i></div><p class="text-sm mt-2">DIY Projects</p></div>
         <div class="flex flex-col items-center"><div class="w-16 h-16 bg-pink-500 rounded-full flex items-center justify-center text-3xl"><i class="fas fa-cocktail"></i></div><p class="text-sm mt-2">Mixology</p></div>
         <div class="flex flex-col items-center"><div class="w-16 h-16 bg-violet-500 rounded-full flex items-center justify-center text-3xl"><i class="fas fa-spa"></i></div><p class="text-sm mt-2">Pilates</p></div>
-        <div class="flex flex-col items-center"><div class="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center text-3xl"><i class="fas fa-brain"></i></div><p class="text-sm mt-2">Mental Health Advocacy</p></div>
+        <div class="flex flex-col items-center"><div class="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center text-3xl"><i class="fas fa-brain"></i></div><p class="text-sm mt-2">Therapy / Mental Health</p></div>
         <div class="flex flex-col items-center"><div class="w-16 h-16 bg-rose-500 rounded-full flex items-center justify-center text-3xl"><i class="fas fa-dice"></i></div><p class="text-sm mt-2">Board Games</p></div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
+  <!-- CONTACT FORM (with particles) -->
   <section id="contact" class="py-24 bg-zinc-900 relative overflow-hidden">
     <div id="contact-particles"></div>
     <div class="max-w-2xl mx-auto px-6 relative z-10">
@@ -232,70 +228,60 @@
   </section>
 
   <footer class="py-8 text-center text-zinc-500 text-sm">
-    © 2026 Hollis Cuffie • Built with Tailwind + tsParticles
+    © 2026 Hollis Cuffie • Built with Tailwind + Particles.js
   </footer>
 
-  <!-- ALL EXTERNAL SCRIPTS MOVED TO THE VERY BOTTOM -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/3.9.1/tsparticles.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/typed.min.js"></script>
-
   <script>
-    const particleConfig = {
-      fullScreen: { enable: false },
-      particles: { 
-        number: { value: 80 }, 
-        color: { value: "#60a5fa" }, 
-        shape: { type: "circle" }, 
-        opacity: { value: 0.6 }, 
-        size: { value: 3 }, 
-        line_linked: { enable: true, distance: 150, color: "#60a5fa", opacity: 0.3, width: 1 }, 
-        move: { enable: true, speed: 1.5 } 
-      },
-      interactivity: { 
-        events: { 
-          onhover: { enable: true, mode: "grab" }, 
-          onclick: { enable: true, mode: "push" } 
-        } 
-      },
+    particlesJS("particles-js", {
+      particles: { number: { value: 80 }, color: { value: "#60a5fa" }, shape: { type: "circle" }, opacity: { value: 0.6 }, size: { value: 3 }, line_linked: { enable: true, distance: 150, color: "#60a5fa", opacity: 0.3, width: 1 }, move: { enable: true, speed: 1.5 } },
+      interactivity: { events: { onhover: { enable: true, mode: "grab" }, onclick: { enable: true, mode: "push" } } },
       retina_detect: true
-    };
+    });
 
-    window.addEventListener('load', function() {
-      // Particles
-      tsParticles.load("particles-js", particleConfig);
-      tsParticles.load("skills-particles", particleConfig);
-      tsParticles.load("contact-particles", particleConfig);
+    particlesJS("skills-particles", {
+      particles: { number: { value: 90 }, color: { value: "#60a5fa" }, shape: { type: "circle" }, opacity: { value: 0.5 }, size: { value: 3 }, line_linked: { enable: true, distance: 140, color: "#60a5fa", opacity: 0.25, width: 1 }, move: { enable: true, speed: 1.2 } },
+      interactivity: { events: { onhover: { enable: true, mode: "grab" } } },
+      retina_detect: true
+    });
 
-      // Typed.js
-      new Typed('#typed', {
-        strings: ["A Senior Data Scientist", "A Product Analytics Leader", "A Causal Inference Expert", "An ML Platform Owner", "An Experimentation Strategist", "A Creative Problem Solver"],
-        typeSpeed: 45, backSpeed: 35, backDelay: 1300, loop: true, showCursor: true, cursorChar: '|'
+    particlesJS("contact-particles", {
+      particles: { number: { value: 70 }, color: { value: "#60a5fa" }, shape: { type: "circle" }, opacity: { value: 0.45 }, size: { value: 2.8 }, line_linked: { enable: true, distance: 130, color: "#60a5fa", opacity: 0.22, width: 1 }, move: { enable: true, speed: 1.1 } },
+      interactivity: { events: { onhover: { enable: true, mode: "grab" } } },
+      retina_detect: true
+    });
+
+    new Typed('#typed', {
+      strings: ["A Senior Data Scientist", "A Product Analytics Leader", "A Causal Inference Expert", "An ML Platform Owner", "An Experimentation Strategist", "A Creative Problem Solver"],
+      typeSpeed: 45, backSpeed: 35, backDelay: 1300, loop: true, showCursor: true, cursorChar: '|'
+    });
+
+    const items = document.querySelectorAll('.timeline-item');
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener('scroll', () => {
+      const currentScrollY = window.scrollY;
+      const scrollingDown = currentScrollY > lastScrollY;
+
+      items.forEach(item => {
+        const rect = item.getBoundingClientRect();
+        const inView = rect.top < window.innerHeight * 0.75 && rect.bottom > window.innerHeight * 0.25;
+
+        if (scrollingDown && inView) {
+          item.classList.add('visible');
+        } else if (!scrollingDown && rect.bottom < window.innerHeight * 0.35) {
+          item.classList.remove('visible');
+        }
       });
+      lastScrollY = currentScrollY;
+    });
 
-      // Timeline
-      const items = document.querySelectorAll('.timeline-item');
-      let lastScrollY = window.scrollY;
-      window.addEventListener('scroll', () => {
-        const currentScrollY = window.scrollY;
-        const scrollingDown = currentScrollY > lastScrollY;
-        items.forEach(item => {
-          const rect = item.getBoundingClientRect();
-          const inView = rect.top < window.innerHeight * 0.75 && rect.bottom > window.innerHeight * 0.25;
-          if (scrollingDown && inView) item.classList.add('visible');
-          else if (!scrollingDown && rect.bottom < window.innerHeight * 0.35) item.classList.remove('visible');
-        });
-        lastScrollY = currentScrollY;
-      });
-
-      // Contact form
-      document.getElementById('contactForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-        window.location.href = `mailto:hollis.cuffie@gmail.com?subject=Message from ${name}&body=${encodeURIComponent(message)}%0A%0AFrom: ${email}`;
-        alert('Opening your email client — thanks for reaching out!');
-      });
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      window.location.href = `mailto:hollis.cuffie@gmail.com?subject=Message from ${name}&body=${encodeURIComponent(message)}%0A%0AFrom: ${email}`;
+      alert('Opening your email client — thanks for reaching out!');
     });
   </script>
 </body>
