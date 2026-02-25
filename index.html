@@ -247,28 +247,26 @@
         shape: { type: "circle" }, 
         opacity: { value: 0.6 }, 
         size: { value: 3 }, 
-        links: { 
-          enable: true, 
-          distance: 150, 
-          color: "#60a5fa", 
-          opacity: 0.3, 
-          width: 1 
-        }, 
+        line_linked: { enable: true, distance: 150, color: "#60a5fa", opacity: 0.3, width: 1 }, 
         move: { enable: true, speed: 1.5 } 
       },
       interactivity: { 
         events: { 
-          onHover: { enable: true, mode: "grab" }, 
-          onClick: { enable: true, mode: "push" } 
+          onhover: { enable: true, mode: "grab" }, 
+          onclick: { enable: true, mode: "push" } 
         } 
       },
       retina_detect: true
     };
 
-    // Initialize all three particle containers
-    tsParticles.load("particles-js", particleConfig);
-    tsParticles.load("skills-particles", particleConfig);
-    tsParticles.load("contact-particles", particleConfig);
+    // tsParticles requires async init with loadFull
+    (async () => {
+      await loadFull(tsParticles);   // ← this was the missing piece!
+
+      tsParticles.load("particles-js", particleConfig);
+      tsParticles.load("skills-particles", particleConfig);
+      tsParticles.load("contact-particles", particleConfig);
+    })();
 
     // Typed.js
     new Typed('#typed', {
