@@ -7,8 +7,8 @@
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/typed.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/3.9.1/tsparticles.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/typed.min.js"></script>
   <style>
     #particles-js, #skills-particles, #contact-particles { 
       position: absolute; 
@@ -77,7 +77,7 @@
     </div>
   </section>
 
-  <!-- TIMELINE -->
+  <!-- TIMELINE / MY JOURNEY -->
   <section id="timeline" class="py-16 bg-zinc-950">
     <div class="max-w-4xl mx-auto px-6">
       <h2 class="text-4xl font-bold mb-12 text-center">My Journey</h2>
@@ -234,12 +234,12 @@
   </section>
 
   <footer class="py-8 text-center text-zinc-500 text-sm">
-    © 2026 Hollis Cuffie • Built with Tailwind + Particles.js
+    © 2026 Hollis Cuffie • Built with Tailwind + tsParticles
   </footer>
 
   <script>
-    // Same particle configuration for all three sections
     const particleConfig = {
+      fullScreen: { enable: false },
       particles: { 
         number: { value: 80 }, 
         color: { value: "#60a5fa" }, 
@@ -258,11 +258,12 @@
       retina_detect: true
     };
 
-    particlesJS("particles-js", particleConfig);
-    particlesJS("skills-particles", particleConfig);
-    particlesJS("contact-particles", particleConfig);
+    // Initialize particles on all three sections
+    tsParticles.load("particles-js", particleConfig);
+    tsParticles.load("skills-particles", particleConfig);
+    tsParticles.load("contact-particles", particleConfig);
 
-    // Typed.js animation
+    // Typed.js
     new Typed('#typed', {
       strings: ["A Senior Data Scientist", "A Product Analytics Leader", "A Causal Inference Expert", "An ML Platform Owner", "An Experimentation Strategist", "A Creative Problem Solver"],
       typeSpeed: 45, backSpeed: 35, backDelay: 1300, loop: true, showCursor: true, cursorChar: '|'
