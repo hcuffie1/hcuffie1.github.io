@@ -354,19 +354,37 @@
       <h2 class="text-4xl font-bold mb-12 text-center">Projects</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-        <a href="https://github.com/hcuffie1/sideprojects/tree/main/uplift-churn-intervention"
+        <a href="https://github.com/hcuffie1/incrementality-lab"
            target="_blank"
            class="project-card bg-zinc-800 rounded-2xl p-8 border border-transparent block">
           <div class="flex items-center gap-3 mb-4">
-            <span class="text-2xl">🎯</span>
-            <h3 class="text-xl font-semibold text-zinc-100">Uplift Modeling for Churn Intervention</h3>
+            <span class="text-2xl">📈</span>
+            <h3 class="text-xl font-semibold text-zinc-100">Incrementality Lab</h3>
           </div>
-          <p class="text-zinc-400 text-sm mb-6">Predicting who will churn isn't the same as predicting who will respond to intervention. Uses meta-learner uplift models on the Criteo dataset to identify persuadable customers — and quantify the ROI of targeting them vs. the full population.</p>
+          <p class="text-zinc-400 text-sm mb-6">Takes a 64,000-customer randomized email test from &ldquo;can we trust this?&rdquo; to &ldquo;who should we email, and is it worth the money?&rdquo; Trust checks, CUPED, an X-learner judged on held-out Qini curves, a profit-based targeting rule, and a geo difference-in-differences study where simulation caught a biased control-matching default. Every method has to recover a planted answer before it touches real data.</p>
           <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 bg-zinc-700 rounded-full text-xs">Uplift Modeling</span>
             <span class="px-3 py-1 bg-zinc-700 rounded-full text-xs">Causal Inference</span>
-            <span class="px-3 py-1 bg-zinc-700 rounded-full text-xs">Qini Curves</span>
+            <span class="px-3 py-1 bg-zinc-700 rounded-full text-xs">Uplift Modeling</span>
+            <span class="px-3 py-1 bg-zinc-700 rounded-full text-xs">CUPED</span>
+            <span class="px-3 py-1 bg-zinc-700 rounded-full text-xs">Geo Experiments</span>
             <span class="px-3 py-1 bg-zinc-700 rounded-full text-xs">Python</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/hcuffie1/llm-eval-lab"
+           target="_blank"
+           class="project-card bg-zinc-800 rounded-2xl p-8 border border-transparent block">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-2xl">🧪</span>
+            <h3 class="text-xl font-semibold text-zinc-100">LLM Eval Lab</h3>
+          </div>
+          <p class="text-zinc-400 text-sm mb-6">Is the new version of an LLM system actually better, and how sure are you? Compares four RAG configurations on Claude using SQuAD 2.0, where half the questions can&rsquo;t be answered, so accuracy and hallucination are measured on the same run. Paired McNemar tests, article-clustered intervals, power analysis, and an LLM judge calibrated against blind human labels, with its error rates corrected out of the final numbers.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-zinc-700 rounded-full text-xs">LLM Evaluation</span>
+            <span class="px-3 py-1 bg-zinc-700 rounded-full text-xs">LLM-as-Judge</span>
+            <span class="px-3 py-1 bg-zinc-700 rounded-full text-xs">Statistical Testing</span>
+            <span class="px-3 py-1 bg-zinc-700 rounded-full text-xs">RAG</span>
+            <span class="px-3 py-1 bg-zinc-700 rounded-full text-xs">Claude API</span>
           </div>
         </a>
 
